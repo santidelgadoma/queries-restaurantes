@@ -9,6 +9,7 @@ db.restaurants.find({"name":/Wil/},{"name":1,"restaurant_id":1,"borough":1,"cuis
 15
 ```javascript
 db.restaurants.find({"name":/ces$/},{"name":1,"restaurant_id":1,"borough":1,"cuisine":1})
+```
 16
 ```javascript
 db.restaurants.find({"name":/Reg/},{"name":1,"restaurant_id":1,"borough":1,"cuisine":1})
