@@ -36,11 +36,11 @@ db.restaurants.find({"name":/Wil/,"cuisine":{$nin:["Chinese","American "]}},{"re
 ```
 22
 ```javascript
-
+db.restaurants.find({ "grades" : { $elemMatch : {"score" : 11,"date": ISODate("2014-08-11T00:00:00Z")} } , "grades.grade" : "A"},{ "restaurant_id": 1, name:1, "grades.grade":1})
 ```
 23
 ```javascript
-
+db.restaurants.find({ "grades" : { $elemMatch : {"score" : 9,"date": ISODate("2014-08-11T00:00:00Z")} } , "grades.1.grade" : "A"},{ "restaurant_id": 1, name:1, "grades.grade":1})
 ```
 24
 ```javascript
@@ -64,7 +64,7 @@ db.restaurants.find({"address.street":{$exists:false}},{"name":1,"address.street
 ```
 29
 ```javascript
-db.restaurants.find({"address.coord":$double})
+db.restaurants.find({"address.coord":{$type:"double"}})
 ```
 30
 ```javascript
@@ -72,9 +72,9 @@ db.restaurants.find({"grades.score":{$lte:7}},{"restaurant_id":1,"name":1,"grade
 ```
 31
 ```javascript
-db.restaurants.find({"name":/mon/},{"name":1,"borough":1,"address.coord.0":1,"address.coord.1":1,"cuisine":1})
+db.restaurants.find({"name":/mon/},{"name":1,"borough":1,"address.coord":1,"cuisine":1})
 ```
 32
 ```javascript
-db.restaurants.find({"name":/^Mad/},{"name":1,"borough":1,"address.coord.0":1,"address.coord.1":1,"cuisine":1})
+db.restaurants.find({"name":/^Mad/},{"name":1,"borough":1,"address.coord":1,"cuisine":1})
 ```
