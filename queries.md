@@ -47,7 +47,7 @@ db.restaurants.find({ "grades" : { $elemMatch : {"score" : 9,"date": ISODate("20
 db.restaurants.find({"address.cord.1":{$gte:42,$lt:52}},{"restaurant_id":1,"name":1,"address.street":1,"address.zipcode":1})
 ```
 25
-```javacript
+```javascript
 db.restaurants.find().sort({"name":1})
 ```
 26
