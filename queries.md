@@ -32,7 +32,7 @@ db.restaurants.find({"grades.score":{$lt:10}},{"restaurant_id":1,"name":1,"borou
 ```
 21
 ```javascript
-db.restaurants.find({"name":/^Wil/,"cuisine":{$nin:["Chinese","American "]}},{"restaurant_id":1,"name":1,"borough":1,"cuisine":1,"grades.score":1})
+db.restaurants.find({"name":/^Wil/,},{"restaurant_id":1,"name":1,"borough":1,"cuisine":1,"grades.score":1})
 ```
 22
 ```javascript
