@@ -4,7 +4,7 @@ db.restaurants.find({"cuisine":{$not:/^American/},"grades.grade":"A","borough":"
 ```
 14
 ```javascript
-db.restaurants.find({"name":/Wil/},{"name":1,"restaurant_id":1,"borough":1,"cuisine":1})
+db.restaurants.find({"name":/^Wil/},{"name":1,"restaurant_id":1,"borough":1,"cuisine":1})
 ```
 15
 ```javascript
