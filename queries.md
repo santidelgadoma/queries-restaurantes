@@ -57,6 +57,7 @@ db.restaurants.find().sort({"name":-1})
 27
 ```javascript
 
+db.restaurants.find({}, {cuisine:1, borough:1}).sort({  borough: -1, cuisine: 1})
 ```
 28
 ```javascript
